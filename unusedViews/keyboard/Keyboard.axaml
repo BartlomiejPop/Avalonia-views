@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.Keyboard"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Keyboard"
+        Background="#303030">
+             
+    <Window.DataContext>
+        <!-- Zadeklarowanie ListModel -->
+        <DataTemplate x:Key="ButtonTemplate">
+            <Button Content="{Binding normal}" Width="70" Height="70" Margin="5"/>
+        </DataTemplate>
+
+        <x:Array x:Key="KeyboardRows" Type="x:Object">
+            <!-- Wiersz 1 -->
+            <x:Array Type="x:Object">
+                <x:Object>
+                    <ListModel>
+                        <ListElement normal="Esc" shift="Esc" alt="Esc" shiftAlt="Esc" widthMultiplier="1.0"/>
+                        <ListElement normal="sp" shift="sp" alt="sp" shiftAlt="sp" widthMultiplier="1.0"/>
+                        <ListElement normal="F1" shift="F1" alt="F1" shiftAlt="F1" widthMultiplier="1.0"/>
+                        <ListElement normal="F2" shift="F2" alt="F2" shiftAlt="F2" widthMultiplier="1.0"/>
+                        <ListElement normal="F3" shift="F3" alt="F3" shiftAlt="F3" widthMultiplier="1.0"/>
+                    </ListModel>
+                </x:Object>
+            </x:Array>
+            <!-- Możesz dodać kolejne wiersze w podobny sposób -->
+        </x:Array>
+        
+    </Window.DataContext>
+
+    <Grid>
+        <!-- Tworzenie klawiatury -->
+        <ItemsControl ItemsSource="{Binding Source={StaticResource KeyboardRows}}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <ItemsControl ItemsSource="{Binding}">
+                            <ItemsControl.ItemTemplate>
+                                <StaticResource ResourceKey="ButtonTemplate"/>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>
