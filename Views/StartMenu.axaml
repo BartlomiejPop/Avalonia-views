@@ -1,0 +1,173 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="GetStartedApp.Views.StartMenu"
+        Title="Keyboard" Width="800" Height="600" Background="rgb(20,26,38)">
+        <Window.Styles>
+        <!-- Styl dla wszystkich przycisków -->
+        
+            <Style Selector="Button">
+                <Setter Property="Background" Value="rgb(15,55,89)"/>
+                <Setter Property="Margin" Value="1"/>
+                <Setter Property="FontSize" Value="8"/>
+                <Setter Property="Foreground" Value="White"/>
+                <!-- <Setter Property="VerticalAlignment" Value="Center"/> -->
+                <!-- <Setter Property="HorizontalAlignment" Value="Center"/> -->
+            </Style>
+            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="rgb(23, 79, 128)"/>
+            </Style>
+    </Window.Styles>
+    <Grid>
+    <!-- Inne elementy, np. treść aplikacji -->
+    <TextBlock VerticalAlignment="Top" Text="Inna treść aplikacji" HorizontalAlignment="Center"  FontSize="24" Margin="20"/>
+    <StackPanel Orientation="Horizontal" >
+     <StackPanel Margin="20" VerticalAlignment="Bottom"  HorizontalAlignment="Stretch">
+        <!-- Pierwszy rząd -->
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Stretch">
+            <Button Content="Esc" Width="40" />
+            <Button Content="sp" Width="25" Margin="1" Opacity="0"/>
+            <Button Content="F1" Width="40"/>
+            <Button Content="F2" Width="40"/>
+            <Button Content="F3" Width="40"/>
+            <Button Content="F4" Width="40"/>
+            <Button Content="sp" Width="25" Margin="1" Opacity="0"/>
+            <Button Content="F5" Width="40"/>
+            <Button Content="F6" Width="40"/>
+            <Button Content="F7" Width="40"/>
+            <Button Content="F8" Width="40"/>
+            <Button Content="sp" Width="25" Margin="1" Opacity="0"/>
+            <Button Content="F9" Width="40"/>
+            <Button Content="F10" Width="40"/>
+            <Button Content="F11" Width="40"/>
+            <Button Content="F12" Width="40"/>
+            <Button Content="sp" Width="25" Margin="1" Opacity="0"/>
+            <Button Content="PS" Width="40"/>
+            <Button Content="SL" Width="40"/>
+            <Button Content="PB" Width="40"/>
+        </StackPanel>
+
+        <!-- Drugi rząd -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="`" Width="40"/>
+            <Button Content="1" Width="40"/>
+            <Button Content="2" Width="40"/>
+            <Button Content="3" Width="40"/>
+            <Button Content="4" Width="40"/>
+            <Button Content="5" Width="40"/>
+            <Button Content="6" Width="40"/>
+            <Button Content="7" Width="40"/>
+            <Button Content="8" Width="40"/>
+            <Button Content="9" Width="40"/>
+            <Button Content="0" Width="40"/>
+            <Button Content="-" Width="40"/>
+            <Button Content="=" Width="40"/>
+            <Button Content="Backspace" Width="80"/>
+            <Button Content="sp" Width="24" Margin="1" Opacity="0"/>
+            <Button Content="INS" Width="40"/>
+            <Button Content="HM" Width="40"/>
+            <Button Content="PU" Width="40"/>
+        </StackPanel>
+        <!-- Trzeci rząd -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="Tab" Width="60"/>
+            <Button Content="q" Width="40"/>
+            <Button Content="w" Width="40"/>
+            <Button Content="e" Width="40"/>
+            <Button Content="r" Width="40"/>
+            <Button Content="t" Width="40"/>
+            <Button Content="y" Width="40"/>
+            <Button Content="u" Width="40"/>
+            <Button Content="i" Width="40"/>
+            <Button Content="o" Width="40"/>
+            <Button Content="p" Width="40"/>
+            <Button Content="[" Width="40"/>
+            <Button Content="]" Width="40"/>
+            <Button Content="\" Width="60"/>
+            <Button Content="sp" Width="24" Margin="1" Opacity="0"/>
+            <Button Content="DEL" Width="40"/>
+            <Button Content="END" Width="40"/>
+            <Button Content="PD" Width="40"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="CapsLock" Width="75"/>
+            <Button Content="a" Width="40"/>
+            <Button Content="s" Width="40"/>
+            <Button Content="d" Width="40"/>
+            <Button Content="f" Width="40"/>
+            <Button Content="g" Width="40"/>
+            <Button Content="h" Width="40"/>
+            <Button Content="j" Width="40"/>
+            <Button Content="k" Width="40"/>
+            <Button Content="l" Width="40"/>
+            <Button Content=";" Width="40"/>
+            <Button Content="'" Width="40"/>
+            <Button Content="Enter" Width="87"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="Shift" Width="94"/>
+            <Button Content="z" Width="40"/>
+            <Button Content="x" Width="40"/>
+            <Button Content="c" Width="40"/>
+            <Button Content="v" Width="40"/>
+            <Button Content="b" Width="40"/>
+            <Button Content="n" Width="40"/>
+            <Button Content="m" Width="40"/>
+            <Button Content="," Width="40"/>
+            <Button Content="." Width="40"/>
+            <Button Content="/" Width="40"/>
+            <Button Content="Shift" Width="110"/>
+            <Button Content="sp" Width="66" Margin="1" Opacity="0"/>
+            <Button Content="↑" Width="40"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="Ctrl" Width="42"/>
+            <Button Content="Win" Width="50"/>
+            <Button Content="Alt" Width="50"/>
+            <Button Content=" " Width="270"/> <!-- Szerokość 6.75 * 40 -->
+            <Button Content="AltR" Width="50"/>
+            <Button Content="Fn" Width="50"/>
+            <Button Content="Rbtn" Width="50"/>
+            <Button Content="Ctrl" Width="50"/>
+            <Button Content="sp" Width="24" Margin="1" Opacity="0"/>
+            <Button Content="←" Width="40"/>
+            <Button Content="↓" Width="40"/>
+            <Button Content="→" Width="40"/>
+        </StackPanel>
+    </StackPanel>
+    <StackPanel VerticalAlignment="Bottom" Margin="20" >
+        <Button Content="1"
+            Width="48" Height="48" FontWeight="Bold" FontSize="24"
+            Background="#54008B" Foreground="#EDEDED"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Styles>
+        </Button>
+
+        <Button Content="2"
+            Width="48" Height="48" FontWeight="Bold" FontSize="24"
+            Background="#54008B" Foreground="#EDEDED"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Styles>
+        </Button>
+
+        <Button Content="3"
+            Width="48" Height="48" FontWeight="Bold" FontSize="24"
+            Background="#54008B" Foreground="#EDEDED"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Styles>
+        </Button>
+    </StackPanel>
+    </StackPanel>
+    </Grid>
+</Window>
